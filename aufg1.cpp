@@ -33,8 +33,6 @@ int main()
 		B.starform();
 	}
 
-	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster A = " << A.fraction() << "%" << endl;
-	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster B = " << B.fraction() << "%" << endl;
-
-	return 0;
+	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster A (nach 15 Zeitschritten) = " << A.fraction() << "%" << endl;	//99.5% der Masse liegen nach 15 Zeitschritten in Sternen vor
+	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster B (nach 15 Zeitschritten) = " << B.fraction() << "%" << endl;	//79.4% der Masse liegen nach 15 Zeitschritten in Sternen vor
 }
