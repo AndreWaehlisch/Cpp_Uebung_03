@@ -2,46 +2,39 @@
 #include <cmath>
 using namespace std;
 
-class Cluster
-{
-public:
+class Cluster {
+ public:
 
-  double mstars;		// Masse der Sterne
-  double mtotal;		// Gesamtmasse
-  double eps;			// Sternenstehungseffiziens
+	double mstars;		// Masse der Sterne
+	double mtotal;		// Gesamtmasse
+	double eps;		// Sternenstehungseffiziens
 
-    Cluster (double iMtotal, double iEps)
-  {
-    mstars = 0.;
-    mtotal = iMtotal;
-    eps = iEps;
-  }
+	 Cluster(double iMtotal, double iEps) {
+		mstars = 0.;
+		mtotal = iMtotal;
+		eps = iEps;
+	} double fraction()	// Anteil der Sternmasse
+	{
+		return (mstars / mtotal) * 100;
+	}
 
-  double f ()			// Anteil der Sternmasse
-  {
-    return (mstars / mtotal) * 100;
-  }
-
-  void starform ()
-  {
-    mstars += eps * (mtotal - mstars);
-  }
+	void starform() {
+		mstars += eps * (mtotal - mstars);
+	}
 };
 
-int
-main ()
+int main()
 {
-  Cluster A (1e8, 0.3);
-  Cluster B (1e9, 0.1);
+	Cluster A(1e8, 0.3);
+	Cluster B(1e9, 0.1);
 
-  for (int i = 0; i < 15; i++)
-    {
-      A.starform ();
-      B.starform ();
-    }
+	for (int i = 0; i < 15; i++) {
+		A.starform();
+		B.starform();
+	}
 
-  cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster A = " << A.f () << "%" << endl;
-  cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster B = " << B.f () << "%" << endl;
+	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster A = " << A.fraction() << "%" << endl;
+	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster B = " << B.fraction() << "%" << endl;
 
-  return 0;
+	return 0;
 }
