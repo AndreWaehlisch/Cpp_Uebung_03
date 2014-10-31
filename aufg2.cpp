@@ -11,7 +11,7 @@ class Vektor {
 		x = 0;
 		y = 0;
 		z = 0;
-	} Vektor(double ix, double iy, double iz) {
+	} Vektor(const double ix, const double iy, const double iz) {
 		x = ix;
 		y = iy;
 		z = iz;
@@ -27,31 +27,28 @@ class Vektor {
 	}
 };
 
-double skalar(Vektor & a, Vektor & b)
+double skalar(const Vektor & a, const Vektor & b)
 {
-	return a.x * b.x + a.y * b.y + a.z * b.z;
+	return (a.x * b.x + a.y * b.y + a.z * b.z);
 }
 
-Vektor kreuz(Vektor & a, Vektor & b)
+const Vektor kreuz(const Vektor & a, const Vektor & b)
 {
-	Vektor ergebnis;
-
-	ergebnis.x = (a.y * b.z - a.z * b.y);
-	ergebnis.y = (a.z * b.x - a.x * b.z);
-	ergebnis.z = (a.x * b.y - a.y * b.x);
+	const Vektor ergebnis((a.y * b.z - a.z * b.y), (a.z * b.x - a.x * b.z), (a.x * b.y - a.y * b.x)
+	    );
 
 	return ergebnis;
 }
 
 int main()
 {
-	Vektor u(2, 1, -1);
-	Vektor v(1, 3, 5);
+	const Vektor u(2, 1, -1);
+	const Vektor v(1, 3, 5);
 	Vektor w = kreuz(u, v);
 
 	cout << "u=" << u << endl;
 	cout << "v=" << v << endl;
-	cout << "Skalarprodukt von u und v: " << skalar(u, v) << endl;	// Das Skalarprodukt verschwindet, u und v sind somit senkrecht.
+	cout << "Skalarprodukt von u und v: " << skalar(u, v) << endl;	// Das Skalarprodukt verschwindet, somit stehen u und v senkrecht aufeinander.
 	cout << "Senkrecht auf u und v steht folgender Vektor: " << w << endl;	// Der Vektor [8, -11, 5] ist das Ergebnis des Kreuzprodukts und steht somit senkrecht auf beiden Vektoren.
 	cout << "Dieser hat den Betrag: " << w.betrag() << endl;	// Sein Betrag ist 14.4914
 }

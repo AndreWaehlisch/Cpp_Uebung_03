@@ -25,14 +25,15 @@ class Cluster {
 
 int main()
 {
-	Cluster A(1e8, 0.3);
-	Cluster B(1e9, 0.1);
+	Cluster A(1e8, .3);
+	Cluster B(1e9, .1);
 
 	for (int i = 0; i < 15; i++) {
 		A.starform();
 		B.starform();
 	}
 
-	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster A (nach 15 Zeitschritten) = " << A.fraction() << "%" << endl;	//99.5% der Masse liegen nach 15 Zeitschritten in Sternen vor
-	cout << "Anteil der Sternmasse (in Sonnenmassen) von Cluster B (nach 15 Zeitschritten) = " << B.fraction() << "%" << endl;	//79.4% der Masse liegen nach 15 Zeitschritten in Sternen vor
+	cout << "Anteile der Sternmasse von der Gesamtmasse nach 15 Zeitschritten" << endl;
+	cout << "Cluster A: " << A.fraction() << "%" << endl;	//99.5% der Masse liegen nach 15 Zeitschritten in Sternen vor
+	cout << "Cluster B: " << B.fraction() << "%" << endl;	//79.4% der Masse liegen nach 15 Zeitschritten in Sternen vor
 }
