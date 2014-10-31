@@ -1,11 +1,9 @@
-%!PS-Adobe-2.0
-%%Title: werter.eps
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: werte.eps
 %%Creator: gnuplot 4.6 patchlevel 4
-%%CreationDate: Tue Oct 28 17:47:09 2014
+%%CreationDate: Fri Oct 31 15:24:38 2014
 %%DocumentFonts: (atend)
-%%BoundingBox: 50 50 554 770
-%%Orientation: Landscape
-%%Pages: (atend)
+%%BoundingBox: 50 50 410 302
 %%EndComments
 %%BeginProlog
 /gnudict 256 dict def
@@ -18,7 +16,7 @@ gnudict begin
 /Blacktext false def
 /Solid false def
 /Dashlength 1 def
-/Landscape true def
+/Landscape false def
 /Level1 false def
 /Rounded false def
 /ClipToBoundingBox false def
@@ -44,7 +42,7 @@ gnudict begin
 /vpt vpt_ def
 /doclip {
   ClipToBoundingBox {
-    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    newpath 50 50 moveto 410 50 lineto 410 302 lineto 50 302 lineto closepath
     clip
   } if
 } def
@@ -429,13 +427,13 @@ systemdict /pdfmark known not {
   userdict /pdfmark systemdict /cleartomark get put
 } if
 SDict begin [
-  /Title (werter.eps)
+  /Title (werte.eps)
   /Subject (gnuplot plot)
   /Creator (gnuplot 4.6 patchlevel 4)
   /Author (jitta)
 %  /Producer (gnuplot)
 %  /Keywords ()
-  /CreationDate (Tue Oct 28 17:47:09 2014)
+  /CreationDate (Fri Oct 31 15:24:38 2014)
   /DOCINFO pdfmark
 end
 } ifelse
@@ -446,13 +444,11 @@ gnudict begin
 gsave
 doclip
 50 50 translate
-0.100 0.100 scale
-90 rotate
-0 -5040 translate
+0.050 0.050 scale
 0 setgray
 newpath
 (Helvetica) findfont 140 scalefont setfont
-BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {BackgroundColor C 1.000 0 0 7200.00 5040.00 BoxColFill} if
 /Helvetica findfont 140 scalefont setfont
 /vshift -46 def
 1.000 UL
@@ -802,7 +798,7 @@ LT0
 /Helvetica findfont 140 scalefont setfont
 LCb setrgbcolor
 6296 4486 M
-('werte.txt' using 1:2) Rshow
+('werte.txt' u 1:2) Rshow
 LT0
 6380 4486 M
 399 0 V
@@ -2495,6 +2491,3 @@ stroke
 grestore
 end
 showpage
-%%Trailer
-%%DocumentFonts: Helvetica
-%%Pages: 1
