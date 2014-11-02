@@ -9,3 +9,8 @@ set logscale x
 set logscale y
 
 plot 'werte.txt' u 1:2 w l
+
+set terminal pngcairo
+set output 'werte.png'
+
+plot 'werte.txt' u 1:2 w l
