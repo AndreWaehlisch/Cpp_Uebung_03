@@ -7,7 +7,7 @@ class IMF {
  public:
 
 	// Auf 1 normierte Initial Mass Function
-	double operator() (double m) {
+	double operator  () (double m) {
 		if (m < 0.08) {
 			return 0.251189 * pow(m, -0.3);
 		} else if (m < 0.5) {

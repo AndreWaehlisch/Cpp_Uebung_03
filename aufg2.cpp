@@ -34,8 +34,7 @@ double skalar(const Vektor & a, const Vektor & b)
 
 const Vektor kreuz(const Vektor & a, const Vektor & b)
 {
-	const Vektor ergebnis((a.y * b.z - a.z * b.y), (a.z * b.x - a.x * b.z), (a.x * b.y - a.y * b.x)
-	    );
+	const Vektor ergebnis((a.y * b.z - a.z * b.y), (a.z * b.x - a.x * b.z), (a.x * b.y - a.y * b.x));
 
 	return ergebnis;
 }
